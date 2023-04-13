@@ -1,0 +1,27 @@
+﻿@model List<WebApplication1.Model.Moda>
+@{
+    ViewData["Title"] = "Moda";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div>
+    <ul>
+        @{
+            foreach (var m in Model)
+            {
+                <a href="#"  style="background: #fff">
+                <li class="w3-button" style="margin-top: 10px; height: 200%; width: 95%;margin-right: 50%">
+                    <img src="~/Resim/@m.Image.Name" style="height: @m.Image.Height%; width: @m.Image.Width%;float: left" />
+                    <h1 style="font-size: 32px;text-align: center;font-weight: 600;font-family: 'Text Me One', sans-serif;">@m.ModaTitle</h1>
+                    <h6><b>@m.Type.Name</b></h6>
+                    <pre>@m.Content</pre>
+                    
+                </li></a>
+            }
+        }
+    </ul>
+
+
+
+</div>
+
